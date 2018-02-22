@@ -1,0 +1,64 @@
+<h1>Update</h1>
+<?php if(is_array($contact_to_update)):?>
+
+<form action="/comp1230/contacts/public/?page=contacts&action=doUpdate" method="post" enctype="multipart/form-data"
+      id="needs-validation" novalidate>
+
+
+        <div class="form-group" >
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" id="title" value="<?php echo $contact_to_update[1];?>" required>
+            <div class="invalid-feedback">
+                Please provide a title.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstname">First name:</label>
+            <input type="text" class="form-control" name="firstname" id="firstname" required value="<?php echo $contact_to_update[2];?>">
+            <div class="invalid-feedback">
+                Please provide first name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last name:</label>
+            <input type="text" class="form-control" name="lastname" id="lastname" required value="<?php echo $contact_to_update[3];?>">
+            <div class="invalid-feedback">
+                Please provide last name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" name="email" id="email" value="<?php echo $contact_to_update[4];?>">
+        </div>
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <input type="text" class="form-control" name="website" id="website" value="<?php echo $contact_to_update[5];?>">
+        </div>
+        <div class="form-group">
+            <label for="cell number">Cell number:</label>
+            <input type="text" name="cellnumber" class="form-control" id="cell number" value="<?php echo $contact_to_update[6];?>">
+            <label for="officenumber">Office number:</label>
+            <input type="text" name="officenumber" class="form-control" id="officenumber" value="<?php echo $contact_to_update[7];?>">
+            <label for="home number">Home number:</label>
+            <input type="text" name="homenumber" class="form-control" id="home number" value="<?php echo $contact_to_update[8];?>">
+        </div>
+        <div class="form-group">
+            <label for="twitter">Twitter:</label>
+            <input type="twitter" name="twitter" id="twitter" class="form-control" value="<?php echo $contact_to_update[9];?>">
+            <label for="facebook">Facebook:</label>
+            <input type="text" name="facebook" id="facebook" class="form-control" value="<?php echo $contact_to_update[10];?>">
+        </div>
+        <div class="form-group">
+            <label for="pic">Picture:</label>
+            <input type="file" name="pic" id="pic" class="form-control-file" value="<?php echo $contact_to_update[11];?>">
+            <label for="comment">Comment:</label>
+            <textarea name="comment" id="comment" class="form-control"><?php echo $contact_to_update[12];?></textarea>
+            <input type="hidden" name="id" value="<?php echo $contact_to_update[0];?>">
+            <button name="submit" class="btn btn-default pull-right">Submit</button>
+        </div>
+</form>
+
+<?php else:?>
+    <h1>Cannot find</h1> //appears in the browser when the contact is not found
+<?php endif; ?>
+

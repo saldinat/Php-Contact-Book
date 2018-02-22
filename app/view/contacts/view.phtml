@@ -1,0 +1,18 @@
+<div class="container">
+<form class="form-inline my-2 my-lg-0 align-right">
+    <input id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" class="form-control mr-sm-2" type="text" aria-label="Search">
+</form>
+<table id="myTable" class="table table-hover">
+    <?php
+        foreach($contacts as $contact) {
+            $contact_fields = explode(',', $contact);
+            echo '<tr>';
+            echo '<td>' . $contact_fields[2] . '</td>';
+            echo '<td>' . $contact_fields[3] . '</td>';
+            echo '<td> <img class="pics" src="/comp1230/contacts/app/data/uploads/' . $contact_fields[11]. '" ></td>';
+            echo '<td><a class="link" onclick="return confirm(\'Are you sure you want to delete the contact ?\');" href="/comp1230/contacts/public/?page=contacts&action=delete&id=' . $contact_fields[0] . '">Delete</a></td>';            echo '<td><a class="link" href="/comp1230/contacts/public/?page=contacts&action=update&id=' . $contact_fields[0] . '">Update</a></td>';
+            echo '</tr>';
+        }
+    ?>
+</table>
+</div>

@@ -1,0 +1,90 @@
+img{
+    width: 20%;
+    float:right;
+    position: relative;
+}
+.link{
+    color: #868e96;
+    text-decoration: none;
+}
+.link:hover{
+    color: #565e66;
+    text-decoration: none;
+}
+#container{
+    border: 1px solid darkgrey;
+    width:800px;
+    margin:5px auto;
+    min-height: 80%;
+}
+.active{
+    color: #54d2d3;
+}
+/* Show it's not fixed to the top */
+
+.navbar{
+    background-color: #398a8b;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar-text{
+    color: #54d2d3;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: #54d2d3;
+    text-decoration: none;
+}
+a.navbar-brand{
+    color: #54d2d3;
+    text-decoration: none;
+}
+
+#cellnumber, #officenumber, #homenumber{
+    width: 20%;
+    display: inline-block;
+}
+
+#twitter, #facebook{
+    width: 20%;
+    display: inline-block;
+}
+
+
+
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
